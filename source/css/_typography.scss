@@ -3,7 +3,7 @@ h1 {
     font-size: 35px;
     font-weight: lighter;
     line-height: 1.4;
-    color: #666;
+    color: $font-grey;
     margin-bottom: 35px;
     
     span {
@@ -22,7 +22,7 @@ h2 {
     font-size: 35px;
     font-weight: lighter;
     line-height: 1.5;
-    color: #666;
+    color: $font-grey;
     margin-bottom: 22px;
 }
 
@@ -32,10 +32,10 @@ p + h2, ul + h2 {
 
 h3 {
     font-family: 'Open Sans';
-    font-size: 20px;
-    font-weight: lighter;
+    font-size: 22px;
+    font-weight: normal;
     line-height: 1.5;
-    color: #666;
+    color: $font-grey;
     margin-bottom: 20px;
 }
 
@@ -46,9 +46,9 @@ p + h3, ul + h3 {
 h4 {
     font-family: 'Open Sans';
     font-size: 17px;
-    font-weight: normal;
+    font-weight: 600;
     line-height: 1.5;
-    color: #666;
+    color: $font-grey;
     margin-bottom: 17px;
 }
 
@@ -60,24 +60,39 @@ p {
     font-family: 'Open Sans';
     font-size: 17px;
     line-height: 1.9;
-    color: #666;
+    color: $font-grey;
 }
 
-a {
-    color: #4BC1DD;
-    border-bottom: 1px solid #4BC1DD;
+p a, li a {
+    color: $primary-blue;
+    border-bottom: 1px solid;
     text-decoration: none;
 
     &:hover {
-        color: #B284B9;
+        color: $primary-purple;
         text-decoration: none;
-        border-bottom: 1px solid #B284B9;
+        border-bottom: 1px solid;
     }
 }
 
+h1 a, h2 a, h3 a, h4 a {
+    color: inherit;
+    border-bottom: 1px solid;
+    
+    &:hover {
+        border-bottom: none;
+        text-decoration: none;
+        color: $primary-purple;
+    }
+}
+
+.inverted h1, .inverted h2, .inverted h3, .inverted h4, .inverted p, .inverted ul {
+    color: #fff;
+}
+
 blockquote {
-    color: #772583;
-    border-left: 1px solid #772582;
+    color: $purple;
+    border-left: 1px solid $purple;
     padding-left: 20px;
     margin-left: 0;
     margin-right: 0;
@@ -97,21 +112,13 @@ blockquote cite {
 
 ul {
     margin: 17px 0;
-}
-
-section ul {
-    padding-left: 0;
-}
-
-section ul li {
-    background: none;
-    padding-left: 0;
+    padding-left: 20px;
     font-size: 17px;
-    color: #868586;
 }
 
 ul.bppicon.icon-task:before {
-    content: ''
+    content: '';
+    padding: 0;
 }
 
 ul.bppicon.icon-task li:before {

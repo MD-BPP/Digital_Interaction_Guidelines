@@ -67,3 +67,17 @@
     font-weight: normal;
     margin-top: 100px;
 }
+
+.sg-overflow {
+    overflow: hidden;
+}
+
+.sg-pattern-desc p {
+    font-size: 13px;
+}
+
+.sg-pattern-category-title {
+    font-size: 25px!important;
+    color: #4a4a4a!important;
+    margin: 60px 0 30px 0!important;
+}

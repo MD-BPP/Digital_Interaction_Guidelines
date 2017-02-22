@@ -25,8 +25,8 @@
     "type": "git",
     "url": "git://github.com/pattern-lab/edition-node-grunt.git"
   },
-  "bugs": "https://github.com/pattern-lab/edition-node-grunt/issues",
-  "author": "Brian Muenzenmeyer",
+  "bugs": "https://github.com/MD-BPP/Digital_Interaction_Guidelines_Master.git",
+  "author": "BPP Professional Education",
   "scripts": {
     "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
   },
