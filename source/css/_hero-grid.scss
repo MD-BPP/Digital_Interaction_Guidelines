@@ -25,6 +25,10 @@
   align-items: stretch;
 }
 
+.hero-grid a {
+    text-decoration: none;
+}
+
 .hero-column{
   -webkit-box-orient: vertical;
   -webkit-flex-direction: column;

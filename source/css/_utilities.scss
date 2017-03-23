@@ -42,21 +42,45 @@ a.drop-shadow:hover {
     font-size: 50px;
     text-decoration: none;
     border-bottom: 0;
-    color: #666;
+    color: $font-grey;
+    
+    &:hover {
+        color: $primary-purple;
+        text-decoration: none;
+    }
 }
 
 .medium-icon {
     font-size: 40px;
     text-decoration: none;
     border-bottom: 0;
-    color: #666;
+    color: $font-grey;
+    
+    &:hover {
+        color: $primary-purple;
+        text-decoration: none;
+    }
 }
 
 .small-icon {
     font-size: 30px;
     text-decoration: none;
     border-bottom: 0;
-    color: #666;
+    color: $font-grey;
+    
+    &:hover {
+        color: $primary-purple;
+        text-decoration: none;
+    }
+}
+
+.icon-hide-text {
+    width: 1px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: -40px;
+    overflow: hidden;
 }
 
 .large-icon:hover, .medium-icon:hover, .small-icon:hover {
@@ -64,7 +88,7 @@ a.drop-shadow:hover {
 }
 
 .inverted .large-icon, .inverted .medium-icon, .inverted .small-icon {
-    color: #fff;
+    color: $white;
 }
 
 .vh-10 {

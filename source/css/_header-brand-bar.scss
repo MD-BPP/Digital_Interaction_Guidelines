@@ -1,0 +1,111 @@
+header {
+    
+    .brand-bar {
+        background-color: #111111;
+        padding: 10px 22px 10px 27px;
+        height: 64px;
+        overflow: hidden;
+        
+        a {
+            display: inline-block;
+            padding-top: 5px;
+            color: $white;
+            font-size: 22px;
+            font-weight: lighter;
+            
+            &:hover {
+                text-decoration: none;
+            }
+            
+            &.header-logo-mobile {
+                display: none;
+            }
+            
+        }
+        
+        img {
+            width: initial;
+            max-width: 100%;
+            
+            &:first-child {
+                padding-right: 27px;
+            }
+        }
+        
+        .InfinityNumber {
+            float: right;
+            padding-top: 7px;
+            
+            &:before {
+                font-size: 125%;
+                padding-right: 5px;
+                padding-top: 2px;
+                display: block;
+                float: left;
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width:850px) {
+    
+    header {
+        
+        .brand-bar {
+            
+            a {
+                
+                &.header-logo-mobile {
+                    display: inline-block;
+                }
+                
+                &.header-logo-desktop {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:680px) {
+    
+    header {
+        
+        .brand-bar {
+            position: relative;
+            
+            a {
+                
+                &.header-logo-mobile {
+                    display: block;
+                    text-align: center;
+                    
+                    img {
+                        padding-right: 0;
+                    }
+                }
+            }
+            
+            .InfinityNumber {
+                position:absolute;
+                right: 22px;
+                top: 10px;
+                
+                &:before {
+                    display: block;
+                }
+            }
+            
+            .hide-text-mobile {
+                width: 1px;
+                height: 1px;
+                display: block;
+                position: absolute;
+                top: -40px;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+.feature-section {
+    display: flex;
+    flex-wrap: wrap;
+    height: inherit;
+    flex-direction: row;
+    flex-shrink: 0;
+}
+
+.feature-100 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 100%;
+    flex: 100%;
+    -webkit-flex: 100%;
+    padding: 40px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.feature-60 {
+    flex: 59%;
+    -webkit-flex: 59%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 0;
+    flex-shrink: 0;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.feature-40 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 40%;
+    flex: 40%;
+    -webkit-flex: 40%;
+    padding: 40px 0;
+    position: relative;
+    flex-shrink: 0;
+    position: relative;
+    /* z-index: 2; */
+}
+
+.feature-section [class*="feature-"]:nth-child(1) {
+    z-index: 2;
+}
+
+.feature-section [class*="feature-"]:nth-child(2) {
+    z-index: 1;
+}
+
+.feature-50 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-basis: 50%;
+    flex: 50%;
+    -webkit-flex: 50%;
+    padding: 40px 0;
+    position: relative;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.feature-container {
+    margin: auto 60px;
+}
+
+.feature-50 .feature-container {
+    margin: auto;
+}
+
+.feature-container blockquote {
+    color: #fff;
+    border-left: none;
+    font-size: 32px;
+    font-weight: lighter;
+    font-style: normal;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.feature-container.push-right {
+    margin: auto 0 auto auto;
+}
+
+.feature-container.push-left {
+    margin: auto auto auto 0;
+}
+
+.feature-100 .feature-container {
+    align-self: center;
+    margin: auto;
+}   
+
+.feature-50 .feature-container.centered {
+    margin: auto;
+}
+
+.feature-60 .feature-container {
+    align-self: flex-end;
+}
+
+.feature-60 .feature-container.reverse {
+    align-self: flex-start;
+}
+
+.feature-40 .feature-container {
+    align-self: flex-start;
+}
+
+.feature-40 .feature-container.reverse {
+    align-self: flex-end;
+}
+
+.feature-section .fade-left::before {
+    content: '';
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+15&1+0,0+15 */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 15%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.feature-section .fade-right::before {
+    content: '';
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+85,ffffff+100&0+85,1+100 */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 85%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(255,255,255,0) 85%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+@media (max-width: 991px) {
+    
+    .drop-shadow {
+        box-shadow: 0;
+    }
+    
+    .feature-section {
+        flex-direction: row;
+    }
+    
+   /** .feature-container {
+        margin: 0;
+    }**/
+    
+    .feature-section.container {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .feature-40, .feature-60 {
+        flex: 100%;
+        -webkit-flex: 100%;
+    }
+    
+    .feature-40 .feature-container, .feature-60 .feature-container {
+        width: 100%;
+    }
+    
+    .container .feature-50 {
+        flex: 100%;
+        -webkit-flex: 100%;
+    }
+    
+    .container .feature-50 .feature-container {
+        width: 100%;
+    }
+    
+    .mobile-order-1 {
+        order: 1;
+        position: relative;
+        z-index: 1!important;
+        padding: 0;
+    }
+    
+    .mobile-order-2 {
+        order: 2;
+        position: relative;
+        z-index: 2!important;
+        padding: 0;
+    }
+    
+    .mobile-order-2 .feature-container {
+        order: 2;
+        margin: -100px 5% auto 5%;
+        background: #fff;
+        padding: 0 30px 30px 30px;
+        width: 100%;
+    }
+    
+    .mobile-order-1 .feature-container {
+        align-self: flex-start;
+        order: 1;
+    }
+    
+    .feature-50.mobile-order-2 .feature-container {
+        margin: auto 5% auto 5%;
+        padding: 0;
+    }
+    
+}

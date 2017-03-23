@@ -89,7 +89,6 @@ module.exports = function (grunt) {
     watch: {
       all: {
         files: [
-          path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.css + '**/*.scss'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
           path.resolve(paths().source.patterns + '**/*'),
@@ -99,13 +98,13 @@ module.exports = function (grunt) {
           path.resolve(paths().source.js + '/*.js'),
           path.resolve(paths().source.root + '/*.ico')
         ],
-        tasks: ['default', 'sass', 'uglify', 'bsReload:css']
+        tasks: ['patternlab:change']
       }
     },
     uglify: {
       build: {
-        src: 'source/*.js',
-        dest: 'source/buildscripts.js'
+        src: 'source/split-js/*.js',
+        dest: 'source/js/buildscripts.js'
       }
     },
     sass: {                              // Task
@@ -170,7 +169,8 @@ module.exports = function (grunt) {
   ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'uglify', 'sass', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'uglify', 'sass', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'uglify', 'sass', 'copy:main', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'uglify', 'sass', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:change', ['uglify', 'sass', 'patternlab', 'copy:main', 'browserSync']);
 
 };
