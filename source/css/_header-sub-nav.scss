@@ -3,45 +3,7 @@ header {
     .sub-nav {
         background-color: #111;
         border-top: 1px solid #32353D;
-        overflow: hidden;
         padding: 0;
-        
-        ul {
-            list-style: none;
-            padding: 0 10px;
-            margin: 0;
-            
-            li {
-                height: 45px;
-                display: inline-block;
-                font-size: 13px;
-                padding: 12px 20px;
-                color: #D8D8D8;
-                
-                &:hover {
-                    cursor: pointer;
-                }
-                
-                & > a {
-                    color: inherit;
-                    border-bottom: none;
-                    padding: 12px 20px 14px 20px;
-                    @include transition(background-color, 0.3s, ease-out);
-                    @include transition(color, 0.3s, ease-out);
-                
-                    &:hover {
-                        background-color: $primary-purple;
-                        color: $white;
-                        @include transition(background-color, 0.3s, ease-out);
-                        @include transition(color, 0.3s, ease-out);
-                    }
-                }
-            }
-            
-            li + a {
-                padding: 0;
-            }
-        }
     }
 
 }

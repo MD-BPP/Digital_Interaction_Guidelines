@@ -1,123 +1,50 @@
-/*
 //------------------------------------------------------
-// Cookie Scripts
+// HEADER MENU SCRIPTS
 //------------------------------------------------------
-
-$(document).ready(function() {
-    $.cookie("visited");
-     
-        if ($.cookie("visited") != "true") {
-            $.cookie('visited', 'true');
-        // Menu opening script for devices over 400px
-            if ( $(window).width() > 400 ) {
-                    $("body > nav").css("margin-left", "0px").delay(1000).animate({"margin-left": "-300px"}, 250);
-                    $(".wrapper").delay(500).animate({"left":"0"}, 250);
+$(document).ready(function(){
+    if ( $('header .sub-nav > ul > li > a').length ) {
+        $('header .sub-nav > ul > li > a').parent('li').css('padding', '12px 0');
+    }
+    
+    $('.sub-nav-toggle').click(function(){
+        if ( $('.secondary-nav').hasClass('open') ) {
+                $('.secondary-nav').removeClass('open');
+                $(this).css('background-color', '#111');
             }
-            //Menu open script for small devices
-            else {
-                    $("body > nav").css("left", "0").delay(500).animate({"left": "-100%"}, 250);
+        else {
+            $('.secondary-nav').addClass('open');
+            $(this).css('background-color', '#32353D');
+        }
+    });
+    
+    $('.primary-nav li').hover(function(){
+        if ( $('.secondary-nav').hasClass('open') ) {
+                $('.secondary-nav').removeClass('open');
+                $('.sub-nav-toggle').css('background-color', '#111');
             }
-        };
-        
-        //console.log($.cookie("visited"));
-});
-*/
-
-
-
-
-
-
-//------------------------------------------------------
-// MENU SCRIPTS
-//------------------------------------------------------
-
-
-$(document).ready(function() {
-    // Menu opening script for devices over 400px
-    if ( $(window).width() > 400 ) {
-            $("header #hamburger").click(function() {
-                if ( $("body > nav").hasClass("open") ) {
-                    $("body > nav").stop().animate({"margin-left":"-300px", "max-height":"100%"}, 250);
-                    $("body > header").stop().css("min-width", "100%").animate({"margin-left":"0px"}, 250);
-                    $(".wrapper").stop().css("min-width", "100%").animate({"left":"0"}, 250);
-                    $("body > nav, #hamburger").addClass("icon-menuHamburger").removeClass("icon-remove");
-                } else {
-                    $("body > nav").stop().css("max-height", "initial").animate({"margin-left":"0px"}, 250);
-                    $("body > header").stop().css("min-width", "100vw").animate({"margin-left":"300px"}, 250);
-                    $(".wrapper").stop().css("min-width", "100vw").animate({"left":"300px"}, 250);
-                    $("body > nav, #hamburger").removeClass("icon-menuHamburger").addClass("icon-remove");
-                }
-                $("body > nav, #hamburger").toggleClass("open");
-                return false;
-            });
-
-            $(".wrapper").click(function() {
-                $("body > nav").stop().animate({"margin-left":"-300px", "max-height":"100%"}, 250);
-                $("body > header").stop().css("min-width", "100%").animate({"margin-left":"0px"}, 250);
-                $(".wrapper").stop().css("min-width", "100%").animate({"left":"0"}, 250);
-                $("body > nav, #hamburger").removeClass("open").addClass("icon-menuHamburger").removeClass("icon-remove");
-            });
-    }
-    //Menu open script for small devices
-    else {        
-            $("header #hamburger").click(function() {
-                if ( $("body > nav").hasClass("open") ) {
-                    $("body > nav").css({"margin-left":"0", "max-height":"100%"}).stop().animate({"left": "-100%"}, 250);
-                    $("body > header, .wrapper").stop().animate({"left": "0"}, 250);
-                    $("body > nav, #hamburger").addClass("icon-menuHamburger").removeClass("icon-remove");
-                } else {
-                    $("body > nav").css({"margin-left":"0", "max-height":"initial"}).stop().animate({"left": "0"}, 250);
-                    $("body > header, .wrapper").stop().animate({"left": "0"}, 250);
-                    $("body > nav, #hamburger").removeClass("icon-menuHamburger").addClass("icon-remove");
-                }
-                $("body > nav, #hamburger").toggleClass("open");
-                return false;
-            });
-    }
-});
-
-
-//Shut Menu on window resize
-$(window).resize(function() {
-    if ( $(window).width() > 400 ) {        
-        if ( $("body > nav").hasClass("open") ) {
-            $("body > nav").stop().animate({"margin-left":"-300px", "max-height":"100%"}, 250);
-            $("body > header").stop().css("min-width", "100%").animate({"margin-left":"0px"}, 250);
-            $(".wrapper").stop().css("min-width", "100%").animate({"left":"0"}, 250);
-            $("body > nav, #hamburger").addClass("icon-menuHamburger").removeClass("icon-remove");
-            $("body > nav, #hamburger").toggleClass("open");
+    });
+    
+    $('.primary-sub-nav-left li').click(function(){
+        if ( $(this).hasClass('active') ) {
+            }
+        else {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
         }
-    }
-    //Menu open script for small devices
-    else {        
-        if ( $("body > nav").hasClass("open") ) {
-            $("body > nav").css("margin-left", "0").stop().animate({"left": "-100%", "max-height":"100%"}, 250);
-            $("body > header, .wrapper").stop().animate({"left": "0"}, 250);
-            $("body > nav, #hamburger").addClass("icon-menuHamburger").removeClass("icon-remove");
-            $("body > nav, #hamburger").toggleClass("open");
-        }
-    }
-});
+    });
+    
+    $('li .programmes').click(function() {
+        $('.programmes').addClass('open');
+        $('.programmes').siblings().removeClass('open');
+    });
+    
+    $('li .disciplines').click(function() {
+        $('.disciplines').addClass('open');
+        $('.disciplines').siblings().removeClass('open');
+    });
+})
 
 
-
-
-
-
-//------------------------------------------------------
-// Mobile Orientation Reload
-//------------------------------------------------------
-window.onorientationchange = function() { 
-    var orientation = window.orientation; 
-        switch(orientation) { 
-            case 0: window.location.reload(); 
-            break; 
-            case 90: window.location.reload(); 
-            break; 
-            case -90: window.location.reload(); 
-            break; } 
-};
 
 
 
