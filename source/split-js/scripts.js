@@ -381,10 +381,10 @@ $(document).ready(function() {
 //------------------------------------------------------
 
 $(document).ready(function() {
-	$(".course-card-grid > a").dotdotdot();
+	$(".course-card-grid > a, .card-download h3").dotdotdot();
 });
 $(window).resize(function() {
-	$(".course-card-grid > a").dotdotdot();
+	$(".course-card-grid > a, .card-download h3").dotdotdot();
 });
 
 
