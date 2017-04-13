@@ -1,0 +1,18 @@
+.anchor-list {
+    padding-left: 0;
+    
+    li {
+        list-style: none;
+        padding-bottom: 20px;
+        
+        a {
+            border-bottom: none;
+            color: #666;
+            
+            &:hover {
+                color: #995CA2;
+                border-bottom: 1px solid #995CA2
+            }
+        }
+    }
+}

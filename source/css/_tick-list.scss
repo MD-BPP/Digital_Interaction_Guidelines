@@ -1,0 +1,10 @@
+ul.tick-list {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+        background:url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/framework_template/icons/tick.png) no-repeat left 6px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+}
