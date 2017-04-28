@@ -48,16 +48,18 @@ header {
     }
 }
 
-@media (max-width:850px) {
+@media (max-width:865px) {
     
     header {
         
         .brand-bar {
+            position: relative;
             
             a {
                 
                 &.header-logo-mobile {
                     display: inline-block;
+                    margin-left: 50px;
                 }
                 
                 &.header-logo-desktop {
@@ -73,13 +75,13 @@ header {
     header {
         
         .brand-bar {
-            position: relative;
             
             a {
                 
                 &.header-logo-mobile {
                     display: block;
                     text-align: center;
+                    margin-left: 0;
                     
                     img {
                         padding-right: 0;
