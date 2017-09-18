@@ -10,6 +10,7 @@ $grey-1: #A7A9AC;
 $grey-2: #31343D;
 $grey-3: #686868;
 $grey-4: #4A4A4A;
+$grey-5: #D8D8D8;
 $transparent: transparent;
 
 /* Primary Colours */
@@ -17,17 +18,44 @@ $primary-blue: #00A7CE;
 $primary-purple: #995CA2;
 
 /* Secondary Colours */
-$purple: #772583;
+$secondary-blue: #1D698A;
+$secondary-purple: #D0B3D3;
+$secondary-bluegrey: #5E6474;
+$secondary-navy: #092D66;
 
 /* Font Colour */
 $font-grey: #666666;
 
 
 /* Hover transition */
-@mixin transition($property, $duration, $easing) {
-    -webkit-transition: $property, $duration, $easing;
-    -moz-transition: $property, $duration, $easing;
-    -ms-transition: $property, $duration, $easing;
-    -o-transition: $property, $duration, $easing;
-    transition: $property, $duration, $easing;
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
 }

@@ -17,6 +17,7 @@
     }
     
     .key-details {
+        -js-display: flex;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -28,6 +29,7 @@
         }
         
         ul {
+            -js-display: flex;
             display: flex;
             flex-direction: row;
             padding-left: 0;
@@ -46,7 +48,7 @@ a.card {
 }
 
 a.card:hover {
-    box-shadow: 6px 10px 20px 0 rgba(0,0,0,0.3), -3px -3px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 6px 10px 20px 0 rgba(0,0,0,0.3);
     -webkit-transition: box-shadow 0.2s linear;
     -moz-transition: box-shadow 0.2s linear;
     -o-transition: box-shadow 0.2s linear;

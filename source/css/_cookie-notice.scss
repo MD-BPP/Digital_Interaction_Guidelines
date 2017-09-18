@@ -1,0 +1,28 @@
+#consentDiv {
+    width: 200px;
+    background: #4a4a4a;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 9999;
+    /*position: fixed;
+    bottom: 0;
+    right: 0;*/
+    
+    p {
+        font-size: 12px;
+        padding: 0;
+        line-height: 1.2;
+        color: #fff;
+        
+        a {
+            padding-top: 5px;
+            display: inline-block;
+        }
+    }
+    
+    a.btn {
+        font-size: 12px;
+        padding: 5px;
+        width: 100%;
+    }
+}

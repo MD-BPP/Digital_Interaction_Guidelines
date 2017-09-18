@@ -19,6 +19,10 @@
     border: none!important;   
 }
 
+.no-pad {
+    padding: 0!important;
+}
+
 .drop-shadow {
     box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.15);
     -webkit-transition: box-shadow 0.2s linear;

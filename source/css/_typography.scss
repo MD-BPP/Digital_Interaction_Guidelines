@@ -90,6 +90,18 @@ h1 a, h2 a, h3 a, h4 a {
     color: #fff;
 }
 
+.inverted a {
+    color: #2dd7ff;
+    
+    &:hover {
+        color: #dd85ea;
+    }
+}
+
+.inverted h1 a, .inverted h2 a, .inverted h3 a, .inverted h4 a {
+    color: #fff;
+}
+
 blockquote {
     color: $purple;
     border-left: 1px solid $purple;
@@ -122,9 +134,13 @@ ul.bppicon.icon-task:before {
 }
 
 ul.bppicon.icon-task li:before {
-	content: "\f1df";
+	content: "\e96c";
 	font-family: BPPIcons;
     padding-right: 5px;
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 1.3em;
 }
 
 ul.bppicon.icon-task {

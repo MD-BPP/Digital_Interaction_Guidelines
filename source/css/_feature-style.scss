@@ -1,4 +1,5 @@
 .feature-section {
+    -js-display: flex;
     display: flex;
     flex-wrap: wrap;
     height: inherit;
@@ -7,6 +8,7 @@
 }
 
 .feature-100 {
+    -js-display: flex;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -21,6 +23,7 @@
 .feature-60 {
     flex: 59%;
     -webkit-flex: 59%;
+    -js-display: flex;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,6 +34,7 @@
 }
 
 .feature-40 {
+    -js-display: flex;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -53,6 +57,7 @@
 }
 
 .feature-50 {
+    -js-display: flex;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,9 +75,9 @@
     margin: auto 60px;
 }
 
-.feature-50 .feature-container {
+/*.feature-50 .feature-container {
     margin: auto;
-}
+}*/
 
 .feature-container blockquote {
     color: #fff;
@@ -99,6 +104,7 @@
 
 .feature-50 .feature-container.centered {
     margin: auto;
+    text-align: center;
 }
 
 .feature-60 .feature-container {
@@ -215,7 +221,15 @@
     
     .feature-50.mobile-order-2 .feature-container {
         margin: auto 5% auto 5%;
-        padding: 0;
+        /*padding: 0;*/
+    }
+    
+}
+
+@media (max-width: 550px) {
+    
+    .mobile-order-2 .feature-container {
+        margin: -50px 5% auto 5%;
     }
     
 }

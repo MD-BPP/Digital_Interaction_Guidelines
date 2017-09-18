@@ -107,6 +107,7 @@
 
 .sg-pattern-example {
     padding: 30px 22px!important;
+    position: relative;
 }
 
 .sg-tabs-list li a:hover {
@@ -118,4 +119,12 @@
     font-size: 30px!important;
     vertical-align: middle!important;
     margin-left: 10px!important;
+}
+
+.sg-pattern-example > h1, .sg-pattern-example > .inverted > h1, .sg-pattern-example > h2, .sg-pattern-example > .inverted > h2, .sg-pattern-example > h3, .sg-pattern-example > .inverted > h3, .sg-pattern-example > h4, .sg-pattern-example > .inverted > h4, .sg-pattern-example > ul, .sg-pattern-example > .inverted > ul {
+    display: table;
+}
+
+.sg-pattern-example > ul.sg-colors {
+    display: flex;
 }

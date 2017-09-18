@@ -1,10 +1,36 @@
+ul.tick-list:before {
+    content: '';
+    padding: 0;
+}
+
+ul.tick-list li:before {
+	content: "\e90a";
+	font-family: BPPIcons;
+    padding-right: 5px;
+    color: $primary-blue;
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 1.3em;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
 ul.tick-list {
-    list-style: none;
     padding-left: 0;
-    
-    li {
-        background:url(https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/framework_template/icons/tick.png) no-repeat left 6px;
-        padding-left: 20px;
-        padding-bottom: 20px;
-    }
+    position: relative;
+}
+
+ul.tick-list li {
+    background: none;
+    padding-left: 25px;
+    font-size: 17px;
+    list-style: none;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+ul.tick-list.inverted li:before, .inverted ul.ticklist:before, ul.tick-list.inverted li, .inverted ul.ticklist {
+    color: $white;
 }

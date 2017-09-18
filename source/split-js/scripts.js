@@ -272,39 +272,6 @@ $(document).ready(function(){
 
 
 //------------------------------------------------------
-// Carousel redaction on mobile
-//------------------------------------------------------
-
-
-$(window).resize(function() {
-    var window_size = window.matchMedia('(max-width: 991px)');
-    if (window.matchMedia('(max-width: 991px)').matches){
-        $('.card-carousel div[role="listbox"]').removeClass("carousel-inner");
-    }
-    else {
-        $('.card-carousel div[role="listbox"]').addClass("carousel-inner");
-    }
-})
-
-
-$(document).ready(function() {
-    var window_size = window.matchMedia('(max-width: 991px)');
-    if (window.matchMedia('(max-width: 991px)').matches){
-        $('.card-carousel div[role="listbox"]').removeClass("carousel-inner");
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-//------------------------------------------------------
 // INT Phone Number form Styling
 //------------------------------------------------------
 $(document).ready(function() {
@@ -327,10 +294,10 @@ $(document).ready(function() {
 //------------------------------------------------------
 
 $(document).ready(function() {
-	$(".course-card-grid > a, .card-download h3").dotdotdot();
+	$(".course-card-grid > a, .card-download h3, .card-programme-info, .card-profile-info h3").dotdotdot();
 });
 $(window).resize(function() {
-	$(".course-card-grid > a, .card-download h3").dotdotdot();
+	$(".course-card-grid > a, .card-download h3, .card-programme-info, .card-profile-info h3").trigger("update");
 });
 
 
@@ -345,7 +312,7 @@ $(window).resize(function() {
 function gridCarousel() {
     
     /* Loop Carousels */
-    jQuery( '.carousel-grid-wrapper' ).each(function() {
+    jQuery( '.carousel-wrapper' ).each(function() {
 
         /* Get Carousel */
         var show = 0;
@@ -353,10 +320,10 @@ function gridCarousel() {
         
         /* Get Elements */
         var carousel = jQuery( this );
-        var len  = carousel.find( '.carousel-grid' ).children().length;
+        var len  = carousel.find( '.carousel-container' ).children().length;
         var next = carousel.find( 'a.next' );
         var prev = carousel.find( 'a.prev' );
-        var slide = carousel.find( '.carousel-grid > a' );
+        var slide = carousel.find( '.carousel-container > a' );
         
         /* Breakpoints */
         if ( window.matchMedia('(min-width: 991px)').matches ) {
@@ -369,8 +336,8 @@ function gridCarousel() {
         
         /* Select Rows */
         function selectRows( start , end ) {
-            carousel.find( '.carousel-grid' ).children().hide();
-            carousel.find( '.carousel-grid' ).children().slice( start , end ).show();
+            carousel.find( '.carousel-container' ).children().hide();
+            carousel.find( '.carousel-container' ).children().slice( start , end ).show();
         }
         selectRows( index , index + show );
     
@@ -597,8 +564,9 @@ if ( $( "#videoContainer" ).length ) {
     jwplayer().setCaptions({
         "color": "#ffffff",
         "fontFamily": "Open Sans",
-        "windowColor": "#000",
+        "windowColor": "rgba(0,0,0,0.6)",
         "windowOpacity": "0.8",
+        "fontWeight": 600,
         "fontSize": "12"
     });
 
@@ -658,3 +626,99 @@ if ( $( ".sticky-nav" ).length ) {
     });
  
 }
+
+
+
+
+
+
+//------------------------------------------------------
+// See more script
+//------------------------------------------------------
+
+$(document).ready(function(){
+    $(".show-more-btn").click(function(){
+      var btnIndex = $(".show-more-btn").index(this);
+      var showIndex = $(document).find(".show-more:eq("+btnIndex+")");
+      var childHeight = $(showIndex).find("> *:nth-child(2)", showIndex).outerHeight();
+      
+      /* Breakpoints */
+      if ( window.matchMedia('(min-width: 990px)').matches && $(showIndex).hasClass("card-download-container") ) {
+        var childNum = 7;
+      } 
+      else if ( window.matchMedia('(max-width: 990px)').matches && window.matchMedia('(min-width: 768px)').matches && $(showIndex).hasClass("card-download-container") ) {
+        var childNum = 5;
+      } 
+      else if ( window.matchMedia('(max-width: 768px)').matches && $(showIndex).hasClass("card-profile-container") ) {
+        var childNum = 3;
+      } 
+      else {
+        var childNum = 4;
+      }
+      
+      if ( $(showIndex).hasClass("open") ) {
+        $(showIndex).find("> *:nth-child(n+"+ childNum +")", showIndex).animate({opacity: 0, height: 0}, 250);
+        $(this).text("Show more");
+        setTimeout(function(){
+        	$(showIndex).removeClass("open");
+            $(showIndex).find("> *:nth-child(n+"+ childNum +")", showIndex).css("display", "none")
+        }, 250);
+      }
+      else {
+        $(showIndex).addClass("open");
+        $(showIndex).find("> *:nth-child(n+"+ childNum +")", showIndex).css("display", "block").animate({opacity: 1, height: childHeight}, 250);
+        $(this).text("Show less");
+      }
+    });
+});
+
+
+
+
+
+
+//------------------------------------------------------
+// Flexibility
+//------------------------------------------------------
+function isIE () {
+  var myNav = navigator.userAgent.toLowerCase();
+  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+
+if (isIE () && isIE () < 11) {
+ flexibility(document.documentElement);
+}
+
+
+
+
+
+
+//------------------------------------------------------
+// Firms carousel
+//------------------------------------------------------
+
+$('.firms-carousel').slick({
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    autoplay: false,
+    prevArrow: '<button type="button" class="bppicon icon-caretWest slick-nav slick-prev"><span class="icon-hide-text">Prev</span></button>',
+    nextArrow: '<button type="button" class="bppicon icon-caretEast slick-nav slick-next"><span class="icon-hide-text">Next</span></button>',
+    appendArrows: $('.carousel-navs'),
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000
+            }
+        }
+    ]
+});

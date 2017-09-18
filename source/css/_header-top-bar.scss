@@ -19,8 +19,7 @@ header {
             box-sizing: border-box;
             font-size: 13px;
             border-right: 1px solid #666;
-            @include transition(background-color, 0.3s, ease-out);
-            @include transition(border, 0.3s, ease-out);
+            @include transition(background-color 0.3s ease-out, border 0.3s ease-out);
             color: #D8D8D8;
             font-weight: 400;
             
@@ -54,7 +53,7 @@ header {
             
             & + a:hover {
                 border-right: 1px solid $primary-purple;
-                @include transition(border, 0.3s, ease-out);
+                @include transition(background-color 0.3s ease-out, border 0.3s ease-out);
             }
         }
         

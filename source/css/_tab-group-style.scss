@@ -1,7 +1,7 @@
 .tab-group {
     width: 100%;
     
-    & > ul {
+    ul {
         -js-display: flex;
         display: flex;
         flex-direction: row;
@@ -12,7 +12,6 @@
         li {
             flex-grow: 1;
             padding: 0;
-            background: none;
         
             &:before {
                 content: '';
@@ -37,7 +36,7 @@
 }
 
 .task-nav {
-    & > ul {
+    ul {
         
         li {
             box-shadow: 3px 0 10px 0 rgba(179,179,179,0.5),
@@ -77,7 +76,7 @@
 
 .on-page-nav {
     
-    & > ul {
+    ul {
         flex: 1 1 auto;
         flex-wrap: wrap;
         margin: 25px 25px 10px 25px;
@@ -99,31 +98,67 @@
 }
 
 .section-nav {
-    & > ul {
+    ul {
         margin: 0;
         padding: 0;
+        -moz-box-shadow: inset 0 -10px 10px -10px #000000;
+        -webkit-box-shadow: inset 0 -10px 10px -10px #000000;
+        box-shadow: inset 0 -7px 10px -10px #888888;
+        padding: 0 25%;
+        background: #F4F4F4;
         
         li {
-            margin: 1px;
+            margin: 0;
+            list-style: none;
             
             a {
-                background: #a1a1a1;
+                background: transparent;
                 color: #4a4a4a;
+                -moz-box-shadow: inset 0 -10px 6px -10px #000000;
+                -webkit-box-shadow: inset 0 -10px 6px -10px #000000;
+                box-shadow: inset 0 -7px 6px -10px #000;
+                text-transform: none;
                 
                 &:hover {
                     color: #fff;
+                    background: #d5d5d5;
+                    color: #4a4a4a;
                 }
                 
                 &.active {
                     background: #4a4a4a;
                     color: #fff;
+                    box-shadow: 0px 5px 0px #fff, 1px -1px 9px rgba(0,0,0,0.15);
+                    -moz-box-shadow: 0px 5px 0px #fff, 1px -1px 9px rgba(0,0,0,0.15);
+                    -webkit-box-shadow: 0px 5px 0px #fff, 1px -1px 9px rgba(0,0,0,0.15);
+                    background: #fff;
+                    color: #4a4a4a;
+                    margin-top: -7px;
+                    padding-top: 22px;
+                    position: relative;
+                    z-index: 200;
                 }
             }
         }
     }
+        
+    ul.inverted li a:hover {
+        background: #adadad;
+    }
     
     .section-wrapper {   
         margin-top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-nav ul {
+        padding: 0;
+    }
+    
+    .section-nav ul li a.active {
+        margin-top: 0;
+        padding-top: 15px;
     }
 }
 
@@ -142,12 +177,4 @@
     .tab-group ul li, .task-nav ul li, .section-nav ul li {
         width: 100%;
     }
-}
-
-/* Guideline purposes only */
-.on-page-nav:nth-child(2n) {
-    -js-display: flex;
-    display: inline-flex;
-    background: #fff;
-    box-shadow: 0 2px 10px 0 rgba(206, 206, 206, 0.5);
 }

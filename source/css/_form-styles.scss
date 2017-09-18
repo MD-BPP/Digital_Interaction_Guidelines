@@ -8,6 +8,12 @@
     max-width: initial;
 }
 
+@media (max-width: 768px) {
+    .form-container.split {
+        max-width: 400px;
+    }
+}
+
 .form-container select, .form-container textarea, .form-container input, .form-container .uneditable-input, .telPhoneNum {
     width: 100%;
     height: 40px;

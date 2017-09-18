@@ -1,0 +1,57 @@
+.breadcrumb {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100%;
+    padding: 0 15px;
+    z-index: 9998;
+    
+    a {
+        font-size: 14px; 
+        margin-right: 15px;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: none;
+        
+        &:after {
+            content: "\e912";
+            font-family: BPPIcons;
+            padding-left: 15px;
+        }
+        
+        &:hover {
+            border-bottom: 0;
+            color: #ddd;
+        }
+        
+        &:hover:after {
+            color: #fff;
+        }
+    }
+    
+    p {
+        margin: 0;
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    &.inverted {
+        
+        a {
+            color: #4a4a4a;
+        
+            &:hover {
+                border-bottom: 0;
+                color: #00A7CE;
+            }
+
+            &:hover:after {
+                color: #4a4a4a;
+            }
+        }
+        
+        p {
+            color: #4a4a4a;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.video-modal {
+    z-index: 9999;
+    
+    .modal-dialog {
+        width: 60%;
+        
+        .modal-content {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            
+            .modal-header {
+                padding: 10px 15px;
+                background: #4d525f;
+                
+                .close {
+                    margin-top: -5px;
+                }
+            }
+            
+            .modal-header, .modal-footer {
+                border: none;
+            }
+            
+            h1, h2, h3, h4 {
+                color: #fff;
+            }
+            
+            .close {
+                color: #fff;
+                font-size: 40px;
+                font-weight: lighter;
+                opacity: 0.8;
+                
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .video-modal {
+        
+        .modal-dialog {
+            width: 95%;
+        }
+    }
+}

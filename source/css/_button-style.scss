@@ -75,6 +75,20 @@
 /* COLOUR */
 .btn-white {
     border: 1px solid $white;
+    background: $white;
+    color: #4a4a4a;
+    font-weight: 400;
+    
+    &:hover {
+        text-decoration: none;
+        background: $primary-purple;
+        border: 1px solid $primary-purple;
+        color: $white;
+    }
+}
+
+.btn-white-border {
+    border: 1px solid $white;
     background: $transparent;
     
     &:hover {
@@ -93,4 +107,8 @@
         background: $primary-purple;
         border: 1px solid $primary-purple;
     }
+}
+
+.inverted a.btn, .inverted a.btn:hover {
+    color: #fff;
 }

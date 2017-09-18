@@ -4,13 +4,13 @@
     
     <div class="top-bar">
         <div class="user-type">
-            <a href="" class="active">Students</a>
-            <a href="">Employers</a>
+            <a href="">Students</a>
+            <a href="" class="active">Employers</a>
         </div>
         
         <div class="session-nav">
-            <a href="#0" class="bppicon icon-shoppingBasket"><span class="icon-hide-text">Basket</span></a>
-            <a href="http://www.bpp.com/accounts" class="bppicon icon-user"><span class="icon-hide-text">Accounts</span></a>
+            <!--<a href="#0" class="bppicon icon-shoppingBasket"><span class="icon-hide-text">Basket</span></a>
+            <a href="http://www.bpp.com/accounts" class="bppicon icon-user"><span class="icon-hide-text">Accounts</span></a>-->
             <a href="http://www.bpp.com/site-search" class="bppicon icon-search"><span class="icon-hide-text">Search</span></a>
         </div>
     </div>
@@ -38,15 +38,18 @@
             <img src="https://s3-eu-west-1.amazonaws.com/bppassets/public/assets/framework_template/images/bbp_mobile_logo.jpg" alt="BPP Professional Education">
         </a>
         
-        <a href="tel:03330 000 000" class="InfinityNumber bppicon icon-phone"><span class="hide-text-mobile">03330 000 000</span></a>
+        <a href="tel:03330 000 000" class="InfinityNumber bppicon icon-phone">03330 000 000</a>
     </div>
     
 <div class="sub-nav">
                 <!-- Mobile -->
-                <ul class="primary-nav visible-xs">
+                <ul class="primary-nav session-nav">
                     <li><a href="#" class="l1-header bppicon icon-search">Search</a></li>
-                    <li><a href="http://employers.bpp.com/who" class="l1-header">Who We Are</a></li>
-                    <li><a href="http://employers.bpp.com/what" class="icon-chevronSouth dropdown l1-header">What We Do</a>
+                </ul>
+                
+                <ul class="primary-nav visible-xs">
+                    <li><a href="http://employers.bpp.com/who" class="l1-header">Who we are</a></li>
+                    <li><a href="http://employers.bpp.com/what" class="icon-chevronSouth dropdown l1-header">What we do</a>
                         <!-- What We Do subnav -->
                         <div class="primary-sub-nav-l1">
                             <div class="primary-sub-nav-header hidden-xs">
@@ -59,26 +62,25 @@
                                         <a href="http://employers.bpp.com/what/apprenticeships" class="l2-header">Apprenticeships <i class="icon-arrow"></i></a>
                                         <ul>
                                             <li><a href="http://employers.bpp.com/what/apprenticeships/levy">Apprenticeship Levy</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer Information</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship Guides</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer information</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship guides</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="http://employers.bpp.com/what/degree-programmes" class="l1-header">Degree Programmes</a></li>
-                                <li><a href="http://employers.bpp.com/what/professional-development" class="l1-header">Professional Development</a></li>
+                                <li><a href="http://employers.bpp.com/what/degree-programmes" class="l1-header">Degree programmes</a></li>
+                                <li><a href="http://employers.bpp.com/what/professional-development" class="l1-header">Professional development</a></li>
                                 <li><a href="http://employers.bpp.com/what/professional-qualifications" class="l1-header">Professional Qualifications</a></li>
                                 <li><a href="#" class="icon-chevronSouth icon-lg-chevronEast l1-header">Disciplines</a>
                                     <div class="primary-sub-nav-l2">
                                         <ul>
+                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, tax and insolvency</a></li>
                                             <li><a href="http://employers.bpp.com/what/actuary">Actuary</a></li>
-                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
-                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, Tax and Insolvency</a></li>
-                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial Services and Banking</a></li>
-                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and Management</a></li>
                                             <li><a href="http://employers.bpp.com/what/dentistry">Dentistry</a></li>
-                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and Healthcare</a></li>
-                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital and Technology</a></li>
-                                            <!-- <li><a href="#" class="bppicon icon-twitter"><span class="icon-hide-text">Icon example</span></a></li> -->
+                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital technology</a></li>
+                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial services and banking</a></li>
+                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
+                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and management</a></li>
+                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and healthcare</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -93,21 +95,21 @@
                                 <h3><a href="http://employers.bpp.com/clients-sectors">Clients &amp; Sectors</a></h3>
                             </div>
                             <ul>
+                                <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Accountancy and tax</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial services</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; social care</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; commerce</a></li>
                                 <li><a href="http://employers.bpp.com/clients-sectors/law">Law</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Professional Services - Accounting and Tax</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial Services</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public Sector</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; Social Care</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; Commerce</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public sector</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our Approach</a></li>
+                    <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our approach</a></li>
                     <li><a href="http://employers.bpp.com/insights" class="l1-header">Insights</a></li>
                     <li><a href="http://employers.bpp.com/events" class="l1-header">Events</a></li>
                     <li><a href="http://employers.bpp.com/locations" class="l1-header">Locations</a></li>
-                    <li><a href="http://employers.bpp.com/meet-the-team" class="l1-header">Meet the Team</a></li>
-                    <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact Us</a></li>
+                    <li><a href="http://employers.bpp.com/meet-the-team" class="l1-header">Meet the team</a></li>
+                    <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact us</a></li>
                 </ul>
 
                 <!-- Desktop -->
@@ -121,23 +123,23 @@
                             </div>
                             <ul>
                                 <li><a href="http://employers.bpp.com/who" class="l1-header">Who We Are</a></li>
-                                <li><a href="#" class="icon-chevronSouth icon-lg-chevronEast l1-header">What We Do</a>
+                                <li><a href="#" class="icon-chevronSouth icon-lg-chevronEast l1-header">What we do</a>
                                     <div class="primary-sub-nav-l2">
-                                        <a href="http://employers.bpp.com/what" class="l2-header">What We Do <i class="icon-arrow"></i></a>
+                                        <a href="http://employers.bpp.com/what" class="l2-header">What we do <i class="icon-arrow"></i></a>
 
                                         <ul>
                                             <li><a href="http://employers.bpp.com/what/apprenticeships" class="l3-header">Apprenticeships</a></li>
                                             <li><a href="http://employers.bpp.com/what/apprenticeships/levy">Apprenticeships Levy</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer Information</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship Guides</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer information</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship guides</a></li>
                                         </ul>
 
                                         <ul>
-                                            <li><a href="http://employers.bpp.com/what/degree-programmes" class="l3-header">Degree Programmes</a></li>
+                                            <li><a href="http://employers.bpp.com/what/degree-programmes" class="l3-header">Degree programmes</a></li>
                                         </ul>
 
                                         <ul>
-                                            <li><a href="http://employers.bpp.com/what/professional-development" class="l3-header">Professional Development</a></li>
+                                            <li><a href="http://employers.bpp.com/what/professional-development" class="l3-header">Professional development</a></li>
                                         </ul>
 
                                         <ul>
@@ -146,14 +148,14 @@
 
                                         <ul>
                                             <li><span class="l3-header">Disciplines</span></li>
+                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, tax and insolvency</a></li>
                                             <li><a href="http://employers.bpp.com/what/actuary">Actuary</a></li>
-                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
-                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, Tax and Insolvency</a></li>
-                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial Services and Banking</a></li>
-                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and Management</a></li>
                                             <li><a href="http://employers.bpp.com/what/dentistry">Dentistry</a></li>
-                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and Healthcare</a></li>
-                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital and Technology</a></li>
+                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital technology</a></li>
+                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial services and banking</a></li>
+                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
+                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and management</a></li>
+                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and healthcare</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -161,31 +163,31 @@
                                     <div class="primary-sub-nav-l2">
                                         <a href="http://employers.bpp.com/clients-sectors" class="l2-header">Clients &amp; Sectors<i class="icon-arrow"></i></a>
                                         <ul>
+                                            <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Accountancy &amp; tax</a></li>
+                                            <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial services</a></li>
+                                            <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; social care</a></li>
+                                            <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; commerce</a></li>
                                             <li><a href="http://employers.bpp.com/clients-sectors/law">Law</a></li>
-                                            <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Professional Services - Accounting &amp; Tax</a></li>
-                                            <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial Services</a></li>
-                                            <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public Sector</a></li>
-                                            <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; Social Care</a></li>
-                                            <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; Commerce</a></li>
+                                            <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public sector</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our Approach</a></li>
+                                <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our approach</a></li>
                                 <li><a href="http://employers.bpp.com/insights" class="l1-header">Insights</a></li>
                                 <li><a href="http://employers.bpp.com/events" class="l1-header">Events</a></li>
                                 <li><a href="http://employers.bpp.com/locations" class="l1-header">Locations</a></li>
-                                <li><a href="http://employers.bpp.com/meet-the-team" class="l1-header">Meet the Team</a></li>
-                                <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact Us</a></li>
+                                <li><a href="http://employers.bpp.com/meet-the-team" class="l1-header">Meet the team</a></li>
+                                <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact us</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="http://employers.bpp.com/who" class="l1-header">Who We Are</a></li>
-                    <li><a href="#" class="icon-chevronSouth dropdown l1-header">What We Do</a>
+                    <li><a href="http://employers.bpp.com/who" class="l1-header">Who we are</a></li>
+                    <li><a href="#" class="icon-chevronSouth dropdown l1-header">What we do</a>
                         <!-- What We Do subnav -->
                         <div class="primary-sub-nav-l1">
                             <div class="primary-sub-nav-header hidden-xs">
                                 <a href="#" class="bppicon close icon-remove"></a>
-                                <h3><a href="http://employers.bpp.com/what">What We Do</a></h3>
+                                <h3><a href="http://employers.bpp.com/what">What we do</a></h3>
                             </div>
                             <ul>
                                 <li><a href="#" class="icon-chevronSouth icon-lg-chevronEast l1-header">Apprenticeships</a>
@@ -194,27 +196,25 @@
 
                                         <ul>
                                             <li><a href="http://employers.bpp.com/what/apprenticeships/levy">Apprenticeships Levy</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer Information</a></li>
-                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship Guides</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/employers">Employer information</a></li>
+                                            <li><a href="http://employers.bpp.com/what/apprenticeships/guides">Apprenticeship guides</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="http://employers.bpp.com/what/degree-programmes" class="l1-header">Degree Programmes</a></li>
-                                <li><a href="http://employers.bpp.com/what/professional-development" class="l1-header">Professional Development</a></li>
+                                <li><a href="http://employers.bpp.com/what/degree-programmes" class="l1-header">Degree programmes</a></li>
+                                <li><a href="http://employers.bpp.com/what/professional-development" class="l1-header">Professional development</a></li>
                                 <li><a href="http://employers.bpp.com/what/professional-qualifications" class="l1-header">Professional Qualifications</a></li>
                                 <li><a href="#" class="icon-chevronSouth icon-lg-chevronEast l1-header">Disciplines</a>
                                     <div class="primary-sub-nav-l2">
-                                        <ul>
-                                            <!-- <li><a href="" class="l3-header">L3 header Example</a></li> -->
+                                        <ul
+                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, tax and insolvency</a></li>
                                             <li><a href="http://employers.bpp.com/what/actuary">Actuary</a></li>
-                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
-                                            <li><a href="http://employers.bpp.com/what/accountancy-tax-insolvency">Accountancy, Tax and Insolvency</a></li>
-                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial Services and Banking</a></li>
-                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and Management</a></li>
                                             <li><a href="http://employers.bpp.com/what/dentistry">Dentistry</a></li>
-                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and Healthcare</a></li>
-                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital and Technology</a></li>
-                                            <!-- <li><a href="#" class="bppicon icon-twitter"><span class="icon-hide-text">Icon example</span></a></li> -->
+                                            <li><a href="http://employers.bpp.com/what/digital-technology">Digital technology</a></li>
+                                            <li><a href="http://employers.bpp.com/what/financial-banking">Financial services and banking</a></li>
+                                            <li><a href="http://employers.bpp.com/what/law">Law</a></li>
+                                            <li><a href="http://employers.bpp.com/what/leadership-management">Leadership and management</a></li>
+                                            <li><a href="http://employers.bpp.com/what/nursing-healthcare">Nursing and healthcare</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -229,18 +229,18 @@
                                 <h3><a href="http://employers.bpp.com/clients-sectors">Clients &amp; Sectors</a></h3>
                             </div>
                             <ul>
+                                <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Accountancy &amp; tax</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial services</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; social care</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; commerce</a></li>
                                 <li><a href="http://employers.bpp.com/clients-sectors/law">Law</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/professional-services">Professional Services - Accounting &amp; Tax</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/financial-services">Financial Services</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public Sector</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/health-social">Health &amp; Social Care</a></li>
-                                <li><a href="http://employers.bpp.com/clients-sectors/industry-commerce">Industry &amp; Commerce</a></li>
+                                <li><a href="http://employers.bpp.com/clients-sectors/public-sector">Public sector</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our Approach</a></li>
+                    <li><a href="http://employers.bpp.com/our-approach" class="l1-header">Our approach</a></li>
                     <li><a href="http://employers.bpp.com/insights" class="l1-header">Insights</a></li>
-                    <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact Us</a></li>
+                    <li><a href="http://employers.bpp.com/contact" class="l1-header">Contact us</a></li>
                 </ul>
 
             </div>

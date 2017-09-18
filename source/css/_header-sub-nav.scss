@@ -44,12 +44,6 @@ header {
                     padding: 0; 
                 }
                 
-                &.bppicon {
-                    padding-top: 3px!important;
-                    padding-bottom: 3px!important;
-                    font-size: 30px;
-                }
-                
                 &:focus {
                     text-decoration: none; 
                 }
@@ -126,6 +120,12 @@ header.fixed-nav-elements .sub-nav {
 }
 
 @media (min-width: 768px) {
+
+header ul a.bppicon {
+        padding-top: 3px!important;
+        padding-bottom: 3px!important;
+        font-size: 30px;
+}
   header .bppicon.icon-lg-chevronEast {
     position: relative; 
     }
@@ -174,6 +174,11 @@ header.fixed-nav-elements .sub-nav {
     }
           header .sub-nav ul.primary-nav > li > a.bppicon:before {
             padding: 0; 
+            vertical-align: middle;
+            font-size: 1.5em;
+            font-size: 30px;
+            display: inline-block;
+            margin-top: -4px;
     }
         header .sub-nav ul.primary-nav > li.open > a {
           transition-delay: .2s; }
@@ -280,7 +285,8 @@ header.fixed-nav-elements .sub-nav {
       header .sub-nav .primary-sub-nav-header a {
         padding: 0;
         color: #ffffff;
-        display: inline-block; }
+        display: inline-block; 
+        background: none;}
       header .sub-nav .primary-sub-nav-header .close {
         margin-top: 13px;
         border: 0;
@@ -510,3 +516,36 @@ header {
       header .sub-nav-toggle button.active .icon-bar:nth-child(3) {
         top: 32px;
         transform: rotate(-45deg); }
+
+header .sub-nav .session-nav {
+    display: none;
+    border-bottom: 1px solid #32353D;
+    
+    li {
+        font-size: 13px;
+        
+        a {
+            
+            &.bppicon {
+                font-size: 14px;
+            }
+            
+            &:before {
+                position: relative;
+                top: auto;
+                right: auto;
+                font-size: 24px;
+                display: block;
+                margin-top: -2px;
+                float: left;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:470px) {
+    header .sub-nav .session-nav {
+        display: block;
+    }
+}

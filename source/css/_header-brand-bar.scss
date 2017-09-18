@@ -59,7 +59,6 @@ header {
                 
                 &.header-logo-mobile {
                     display: inline-block;
-                    margin-left: 50px;
                 }
                 
                 &.header-logo-desktop {
@@ -67,6 +66,13 @@ header {
                 }
             }
         }
+    }
+}
+
+@media (max-width:767px) {
+    
+    header .brand-bar a.header-logo-mobile {
+        margin-left: 50px;
     }
 }
 
@@ -93,19 +99,13 @@ header {
                 position:absolute;
                 right: 22px;
                 top: 10px;
+                font-size: 0;
                 
                 &:before {
                     display: block;
+                    font-size: 30px;
+                    padding-top: 0;
                 }
-            }
-            
-            .hide-text-mobile {
-                width: 1px;
-                height: 1px;
-                display: block;
-                position: absolute;
-                top: -40px;
-                overflow: hidden;
             }
         }
     }

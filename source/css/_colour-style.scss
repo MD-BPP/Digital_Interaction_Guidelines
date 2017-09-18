@@ -126,12 +126,41 @@
 
 }
 
+.grey-5 {
+    background: $grey-5!important;
+}
+
+.lightgrey-grey-5 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$lightgrey+0,d8d8d8+100 */
+    background: $lightgrey; /* Old browsers */
+    background: -moz-linear-gradient(top, $lightgrey 0%, $grey-5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $lightgrey 0%,$grey-5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $lightgrey 0%,$grey-5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$lightgrey', endColorstr='$grey-5',GradientType=0 ); /* IE6-9 */
+}
+
 .primary-blue {
     background: $primary-blue!important;
 }
 
+.secondary-blue {
+    background: $secondary-blue!important;
+}
+
 .primary-purple {
     background: $primary-purple!important;
+}
+
+.secondary-purple {
+    background: $secondary-purple!important;
+}
+
+.secondary-bluegrey {
+    background: $secondary-bluegrey!important;
+}
+
+.secondary-navy {
+    background: $secondary-navy!important;
 }
 
 .transparent {

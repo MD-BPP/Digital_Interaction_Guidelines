@@ -1,0 +1,92 @@
+.accordion-container {
+    overflow: hidden;
+    
+    .accordion-slide {
+        overflow: hidden;
+        border-top: 1px solid #999;
+        position: relative;
+        z-index: 1;
+        
+        &:last-child {
+            border-bottom: 1px solid #999;
+        }
+        
+        .accordion-slide:last-child {
+            border-bottom: none;
+        }
+        
+        div {
+            position: relative;
+            z-index: 2;
+        }
+        
+        & > div:first-child > h3:after {
+            content: "\e912";
+            font-family: BPPIcons;
+            position: absolute;
+            right: 5px;
+            top: 20px;
+            transition: all 250ms linear;
+            -webkit-transition: all 250ms linear;
+            -moz-transition: all 250ms linear;
+            -ms-transition: all 250ms linear;
+        }
+        
+        .open {
+            border-top: 2px solid #999;
+            transition: border 60ms linear;
+            -webkit-transition: border 60ms linear;
+            -moz-transition: border 60ms linear;
+            -ms-transition: border 60ms linear;
+        }
+        
+        .open h3:after {
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transition: all 250ms linear;
+            -webkit-transition: all 250ms linear;
+            -moz-transition: all 250ms linear;
+            -ms-transition: all 250ms linear;
+        }
+        
+        & > div:first-child > h3 {
+            cursor: pointer;
+            margin: 15px 5px;
+            font-size: 17px;
+            font-weight: normal;
+            padding-right: 40px;
+        }
+        
+        p {
+            font-weight: normal;
+            font-size: 15px;
+        }
+        
+        ul {
+            font-size: 15px;
+        }
+        
+        h2 {
+            font-size: 30px;
+        }
+        
+        h3 {
+            font-size: 17px;
+        }
+        
+        h4 {
+            font-size: 15px;
+        }
+        
+        & > div:last-child {
+            display: none;
+            padding: 0 0 0 20px;
+        }
+        
+        div {
+            overflow: hidden;
+        }
+    }
+}
